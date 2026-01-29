@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+    <!-- 1. Pantalla de la calculadora (Display) -->
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="end|center_vertical"
+            android:textColor="#C7BFBF"
+            android:textSize="24sp" />
+
+        <!-- 2. Contenedor de Botones -->
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="end|center_vertical"
+            android:textSize="30sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- Fila 2: 7, 8, 9, / -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#555A68"
+                    android:text="7"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#555A68"
+                    android:text="8"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#555A68"
+                    android:text="9"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/buttonDivision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#3B3D49"
+                    android:text="/"
+                    android:onClick="operador"
+                    android:hapticFeedbackEnabled="true" />
+            </TableRow>
+            <!-- Fila 2: 4, 5, 6, x -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#555A68"
+                    android:text="4"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#555A68"
+                    android:text="5"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#555A68"
+                    android:text="6"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/buttonPor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#3B3D49"
+                    android:text="x"
+                    android:onClick="operador"
+                    android:hapticFeedbackEnabled="true" />
+            </TableRow>
+            <!-- Fila 2: 1, 2, 3, - -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#555A68"
+                    android:text="1"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#555A68"
+                    android:text="2"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#555A68"
+                    android:text="3"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/buttonMenos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#3B3D49"
+                    android:text="-"
+                    android:onClick="operador"
+                    android:hapticFeedbackEnabled="true" />
+
+            </TableRow>
+            <!-- Fila 2: C, 0, =, + -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/buttonC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#3B3D49"
+                    android:text="C"
+                    android:onClick="reset"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/button0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#555A68"
+                    android:text="0"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/buttonIgual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#C7BFBF"
+                    android:text="="
+                    android:onClick="calcular"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/buttonMas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#3B3D49"
+                    android:text="+"
+                    android:onClick="operador"
+                    android:hapticFeedbackEnabled="true" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

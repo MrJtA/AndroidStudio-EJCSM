@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/intro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/idAutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
+        android:fontFamily="@font/inter_semibold"
+        android:gravity="center"
+        android:text="Hecho por:\nEthan Joaquín Castro San Miguel"
+        android:textColor="#000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="301dp"
+        android:layout_height="313dp"
+        android:layout_marginBottom="28dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_azul"
+        app:layout_constraintBottom_toTopOf="@+id/layoutTexto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/btnInicio"
+        android:layout_width="326dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="68dp"
+        android:backgroundTint="#2A3F5B"
+        android:fontFamily="@font/inter_semibold"
+        android:gravity="center"
+        android:text="Empezar"
+        android:textColor="#F0EBEB"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/idAutor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutTexto"
+        android:layout_width="339dp"
+        android:layout_height="129dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btnInicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txtBienvenida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="center"
+            android:text="Bienvenido a tu gestor de tareas"
+            android:textColor="#020202"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/txtSubtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="center"
+            android:text="Organiza tu día y completa tus objetivos"
+            android:textColor="#090909"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

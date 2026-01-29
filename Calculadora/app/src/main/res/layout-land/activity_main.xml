@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    <!-- 1. Pantalla de la calculadora (Display) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom">
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="end|center_vertical"
+            android:textColor="#C7BFBF"
+            android:textSize="38sp" />
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="end|center_vertical"
+            android:textSize="48sp" />
+    </LinearLayout>
+    <!-- 2. Contenedor de Botones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical">
+            <!-- Fila 1: ←, / -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/butonBorrar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:backgroundTint="#3B3D49"
+                    android:onClick="borrar"
+                    android:text="←"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/buttonDivision"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#3B3D49"
+                    android:text="/"
+                    android:onClick="operador"
+                    android:hapticFeedbackEnabled="true" />
+
+            </LinearLayout>
+            <!-- Fila 2: 7, 8, 9, x -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#555A68"
+                    android:text="7"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#555A68"
+                    android:text="8"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#555A68"
+                    android:text="9"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/buttonPor"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#3B3D49"
+                    android:text="x"
+                    android:onClick="operador"
+                    android:hapticFeedbackEnabled="true" />
+            </LinearLayout>
+            <!-- Fila 3: 4, 5, 6, - -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#555A68"
+                    android:text="4"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#555A68"
+                    android:text="5"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#555A68"
+                    android:text="6"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/buttonMenos"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#3B3D49"
+                    android:text="-"
+                    android:onClick="operador"
+                    android:hapticFeedbackEnabled="true" />
+            </LinearLayout>
+            <!-- Fila 4: 1, 2, 3, + -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#555A68"
+                    android:text="1"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#555A68"
+                    android:text="2"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#555A68"
+                    android:text="3"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/buttonMas"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#3B3D49"
+                    android:text="+"
+                    android:onClick="operador"
+                    android:hapticFeedbackEnabled="true" />
+            </LinearLayout>
+            <!-- Fila 5: C, 0, Coma, = -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/buttonC"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#3B3D49"
+                    android:onClick="reset"
+                    android:text="C"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/button0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#555A68"
+                    android:text="0"
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/buttonComa"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#555A68"
+                    android:text="."
+                    android:onClick="numero"
+                    android:hapticFeedbackEnabled="true" />
+                <Button
+                    android:id="@+id/buttonIgual"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#C7BFBF"
+                    android:text="="
+                    android:onClick="calcular"
+                    android:hapticFeedbackEnabled="true" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Contenedor para &, ^, log, ln -->
+        <LinearLayout
+            android:id="@+id/extra_functions"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/buttonResto"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="#3B3D49"
+                android:onClick="operador"
+                android:text="%"
+                android:hapticFeedbackEnabled="true" />
+            <Button
+                android:id="@+id/buttonPotencia"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="#3B3D49"
+                android:onClick="operador"
+                android:text="^"
+                android:hapticFeedbackEnabled="true" />
+            <Button
+                android:id="@+id/buttonLog"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="#3B3D49"
+                android:onClick="operador"
+                android:text="log"
+                android:hapticFeedbackEnabled="true" />
+            <Button
+                android:id="@+id/buttonLn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="#3B3D49"
+                android:onClick="operador"
+                android:text="ln"
+                android:hapticFeedbackEnabled="true" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
